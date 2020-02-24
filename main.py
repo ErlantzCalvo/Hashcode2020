@@ -36,7 +36,7 @@ class Library:
         global actualDay
         score = ((numDays - actualDay - self.signupDays) - self.bookNumber/self.booksPerDay)      
         if score > 0:
-            self.score =  1/score
+            self.score = 1/score
         elif score < 0:
             self.score = -1*score
         else:
@@ -99,6 +99,8 @@ def main():
                     except ValueError:
                         pass
                 i.fitness()
+        else:
+            actualDay -= l.signupDays
     
     write_file(sys.argv[2], f"{librariesToScan}\n" + finalString)
 
