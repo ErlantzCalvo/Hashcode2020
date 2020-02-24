@@ -34,7 +34,7 @@ class Library:
     def fitness(self):
         global numDays
         global actualDay
-        score = ((numDays - actualDay - self.signupDays) - self.bookNumber/self.booksPerDay)      
+        score = ((numDays - actualDay - (self.booksPerDay/ self.signupDays)) - self.bookNumber/self.booksPerDay)      
         if score > 0:
             self.score = 1/score
         elif score < 0:
@@ -73,7 +73,6 @@ def main():
 
     for i in libraries:
         i.fitness()
-    
     while (actualDay <= numDays) and len(libraries) != 0:
         libraries.sort(reverse=True)
         actualDay += libraries[0].signupDays
