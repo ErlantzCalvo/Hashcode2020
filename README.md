@@ -1,5 +1,5 @@
 # Hashcode2020
 
 <h1>Google Hashcode 2020.</h1>
-Total score: 13.933.297
-World position: 5669
+<b>Total score:</b> 13.933.297\n
+<b>World position:</b> 5669
